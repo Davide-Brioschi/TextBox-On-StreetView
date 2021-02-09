@@ -1,0 +1,137 @@
+html, body{
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+}
+a:link, a:visited, a:hover,a:active {
+    text-decoration: none;
+}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+#map-container{
+  position: relative;
+  width:100%;
+  height: 100%;
+}
+#street-view{
+  width:100%;
+  height:100%;
+}
+#map{
+  position: absolute;
+  right:10px;
+  bottom:20px;
+  width:400px;
+  height:300px;
+  z-index: 10000;
+}
+.text-box{
+  display:none;
+  position: absolute;
+  padding: 12px;
+  left:10px;
+  top:100px;
+  width:356px;
+  height:auto;
+  color: white;
+  object-fit: contain;
+  border-radius: 5px;
+  background-image: linear-gradient(to bottom, rgb(250, 250, 250, 0.9), rgb(163, 163, 163, 0.9));
+  /*background: url(../images/background-1.png);*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10000;
+}
+.arrow-box{
+  position: relative;
+  width:100%;
+  height:40px;
+}
+.question-box{
+  padding: 0 30px 0 5px;
+  font-family: Oswald;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  line-height: 1.08;
+  color: #4a4a4a;
+  word-break: break-word;
+  margin-bottom: 10px;
+}
+
+.arrow-box > a {
+    text-decoration: none;
+    display: inline-block;
+    position: absolute;
+    font-size: 32px;
+}
+a.previous {
+    left: 10px;
+}
+a.next {
+    right: 10px;
+}
+.answer-box{
+  padding: 0;
+}
+div.answer{
+  padding:10px 20px;
+  margin-bottom: 10px;
+  font-family: Oswald;
+  font-size:20px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #4a4a4a;
+  word-break: break-word;
+  cursor:pointer;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+div.answer:last-child{
+  margin-bottom: 0;
+}
+div.answer.normal{
+  background-image: url(../images/normal-box.png);
+}
+div.answer.wrong{
+  background-image: url(../images/wrong-box.png);
+}
+div.answer.right{
+  background-image: url(../images/right-box.png);
+}
+.story-box{
+  display: none;
+  padding: 5px;
+}
+.story-content{
+  padding:5px;
+  max-height:250px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: Oswald;
+  font-size:20px;
+  color: #4a4a4a;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  word-break: break-word;
+}
+.story-content::-webkit-scrollbar{
+    width:6px;
+    background-color: #F5F5F5;
+}
+.story-content::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+.story-content::-webkit-scrollbar-thumb{
+    background-color: #b4b4b4;
+}

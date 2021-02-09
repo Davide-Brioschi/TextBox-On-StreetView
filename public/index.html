@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Street View</title>
+    <!-- <link rel='icon' href='img/logo/bar-icon.jpg' type='image/x-icon'> -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic|Oswald:400,700" media="screen">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/responsivevoice.js"></script>
+    <!--<script type="text/javascript" src="js/d3.v4.min.js"></script>-->
+  </head>
+  <body>
+    <div id="map-container">
+        <div id="street-view"></div>
+        <div id="map"></div>
+        <div class="text-box">
+          <div class="arrow-box">
+              <a href="#" class="previous"><img src="images/prev.png"></a>
+              <a href="#" class="next"><img src="images/next.png"></a>
+          </div>
+          <div class="question-box"></div>
+          <div class="answer-box"></div>
+          <div class="story-box">
+              <div class="story-content"></div>
+          </div>
+        </div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNSD8o2CyNEWb73m62IUL9i7T4i9TF3rM&libraries=geometry,drawing,places"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-database.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAXWz7hDRCg_3MoWQgEZBBMcJJVs5mXtoY",
+        authDomain: "streetview-38834.firebaseapp.com",
+        databaseURL: "https://streetview-38834.firebaseio.com",
+        projectId: "streetview-38834",
+        storageBucket: "streetview-38834.appspot.com",
+        messagingSenderId: "613779061367"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="js/google-map.js"></script>
+  </body>
+</html>
